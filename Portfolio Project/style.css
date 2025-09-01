@@ -1,0 +1,162 @@
+/* ===== Base & Resets ===== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.55;
+}
+
+/* ===== Sidebar Nav ===== */
+.sidebar {
+  position: fixed;   /* stays put while scrolling */
+  top: 0;
+  left: 0;
+  height: 100vh;     /* full viewport height */
+  width: 200px;
+  background: #0056b3;
+  padding: 28px 0;
+  overflow-y: auto;  /* scroll if menu grows */
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 16px;
+}
+
+.sidebar li { margin: 6px 0; }
+
+.sidebar a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-left: 4px solid transparent;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  background: #004099;
+  border-left-color: #9ec5ff;
+  outline: none;
+}
+
+/* Optional: “current section” style if you manually add class="active" */
+.sidebar a.active {
+  background: #003579;
+  border-left-color: #ffffff;
+}
+
+/* ===== Main Content Wrapper ===== */
+.content {
+  margin-left: 220px;   /* leave room for the sidebar */
+  padding: 20px;
+}
+
+/* ===== Headings ===== */
+h1 {
+  color: #0056b3;
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+h2 {
+  color: #0056b3;
+  text-align: left;
+  margin: 0 0 12px;
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: #555;
+}
+
+/* ===== Section Card ===== */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;   /* Title at top, content below */
+  gap: 16px;
+}
+
+/* ===== Inner Content Row ===== */
+.container-content {
+  display: flex;
+  flex-direction: column;   /* stack on mobile */
+  gap: 20px;
+}
+
+.container-content > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* On larger screens: two-column layout for content */
+@media (min-width: 768px) {
+  .container-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* ===== Lists ===== */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* ===== Images ===== */
+.hobby-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 280px;   /* keep image modest */
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* ===== Responsive: Small Screens ===== */
+@media (max-width: 700px) {
+  .sidebar {
+    position: static;     /* becomes a top bar */
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+  .sidebar ul {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  .sidebar a {
+    border-left: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+  }
+
+  .content {
+    margin-left: 0;       /* no sidebar offset */
+    padding: 12px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 16px;
+  }
+}

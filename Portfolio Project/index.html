@@ -1,19 +1,84 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Project 1</title>
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
+  <body>
+    <!-- Sidebar navigation -->
+    <nav class="sidebar" role="navigation" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#why">Why SUVX25?</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <body>
-        <h1>My Porfolio</h1>
-        <h2>About Me</h2>
-        <h3>Hobbies</h3>
-        <p>Brazilian Jiu-Jitsu
-          <br>Music
-            <br>Gaming
-                <br>F1
-                    <br>Product Development
-        </p>
-    </body>
+    <!-- Main content -->
+    <div class="content" id="home">
+      <h1>Alexander Safapay</h1>
+
+      <!-- About -->
+      <section id="hobbies" class="container">
+        <h2>Hobbies</h2>
+        <div class="container-content">
+          <div>
+            <h3>My Hobbies</h3>
+            <ul>
+              <li>Brazilian Jiu-Jitsu</li>
+              <li>Music</li>
+              <li>Gaming</li>
+              <li>Formula 1</li>
+              <li>Product Development</li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="images/Torments.jpg"
+              alt="Photo of my band Torments"
+              class="hobby-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section id="resume" class="container">
+        <h2>Resume</h2>
+        <div class="container-content">
+          <div>
+            <p>Coming soon…</p>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <!-- Why SUVX25? -->
+<section id="why" class="container">
+  <h2>Why SUVX25?</h2>
+  <div class="container-content">
+    <div>
+      <p>I chose to study this because...</p>
+    </div>
+    <div></div>
+  </div>
+</section>
+
+      <!-- Contact -->
+      <section id="contact" class="container">
+        <h2>Contact</h2>
+        <div class="container-content">
+          <div>
+            <p>Email: <a href="mailto:alexander.safapay@chasacademy.se">alexander.safapay@chasacademy.se</a></p>
+          </div>
+          <div></div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
